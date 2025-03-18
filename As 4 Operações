@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>As 4 Operações</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        form {
+            padding: 20px;
+            border: 2px solid #333; 
+            border-radius: 20px;
+            background-color: white;
+            text-align: center;
+        }
+
+        input[type="button"], input[type="number"] {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        input[type="button"] {
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+    </style>
+    <script type="text/javascript">
+    function soma() {
+        var n1 = parseInt(document.form.n1.value);
+        var n2 = parseInt(document.form.n2.value);
+        document.form.resultado.value = n1 + n2;
+    }
+
+    function subtração() {
+        var n1 = parseInt(document.form.n1.value);
+        var n2 = parseInt(document.form.n2.value);
+        document.form.resultado.value = n1 - n2;
+    }
+
+    function multiplicação() {
+        var n1 = parseInt(document.form.n1.value);
+        var n2 = parseInt(document.form.n2.value);
+        document.form.resultado.value = n1 * n2;
+    }
+
+    function divisão() {
+        var n1 = parseInt(document.form.n1.value);
+        var n2 = parseInt(document.form.n2.value);
+        if (n2 === 0){
+            document.form.resultado.value = "Erro"
+        }
+        else {
+    
+        document.form.resultado.value = n1 / n2;
+    }
+}
+    </script>
+</head>
+<body>
+    
+        <p><mark style="background-color: aqua;"><b>Função JS: As 4 Operações</b></mark></p>
+        
+    <form name="form">
+
+        Digite o primeiro número: <input name="n1" id="n1" type="number" autofocus>
+        <br>
+        Digite o segundo número: <input name="n2" id="n2" type="number">
+        <br>
+        <input type="button" onclick="soma()" value="Somar" >
+        <input type="button" onclick="subtração()" value="Subtrair">
+        <input type="button" onclick="multiplicação()" value="Multipliclar">
+        <input type="button" onclick="divisão()" value="Dividir">
+        <br>
+        O resultado da é: <output name="resultado" id="resultado"></output>
+        
+    </form>
+    
+</body>
+</html>
