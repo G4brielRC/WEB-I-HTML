@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+            margin: 0;
+            background-color:whitesmoke
+        }
+
+        form {
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: white;
+            text-align: center
+        }
+
+        input[type="button"], input[type="number"] {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        input[type="button"] {
+            background-color: green;
+            color: white;
+            border: none;
+        }
+
+        output {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+    </style>
+    <script type="text/javascript">
+        function calcularIMC() {
+            var peso = parseFloat(document.form_imc.peso.value);
+            var altura = parseFloat(document.form_imc.altura.value);
+            
+            if (peso <= 0 || altura <= 0) {
+                document.form_imc.resultadoIMC.value = "Erro: Insira valores válidos!";
+                return;
+            }
+
+            var imc = (peso / (altura * altura)).toFixed(2);
+            var categoria = "";
+
+            if (imc < 18.5) {
+                categoria = "Abaixo do peso";
+            } else if (imc >= 18.5 && imc < 24.9) {
+                categoria = "Peso normal";
+            } else if (imc >= 25 && imc < 29.9) {
+                categoria = "Sobrepeso";
+            } else {
+                categoria = "Obesidade";
+            }
+
+            document.form_imc.resultadoIMC.value = "IMC: " + imc;
+            document.form_imc.categoriaIMC.value = "Classificação: " + categoria;
+        }
+    </script>
+</head>
+<body>
+    <form name="form_imc">
+        <h2>Calculadora de IMC</h2>
+        <label for="peso">Peso (kg):</label>
+        <input name="peso" type="number" required>
+        <br><br>
+
+        <label for="altura">Altura (m):</label>
+        <input name="altura" type="number" step="0.01" required>
+        <br><br>
+
+        <input type="button" onclick="calcularIMC()" value="Calcular IMC">
+        <br><br>
+
+        <label for="resultadoIMC">Resultado IMC:</label>
+        <output name="resultadoIMC"></output>
+        <br><br>
+
+        <label for="categoriaIMC">Classificação:</label>
+        <output name="categoriaIMC"></output>
+    </form>
+</body>
+</html>
