@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">S
+    <title>Java e JavaScript</title>
+</head>
+<body style="font-family: Tahoma;">
+    <h1><center>Diferença entre Java e JavaScript</h1>
+    <hr>
+    <br>
+    <p><b>1. JavaScript e Java são a mesma coisa?</b></p>
+    <p>Não, Java e JavaScript não são a mesma coisa. 
+    <br>
+    Java é uma linguagem de programação usada para aplicativos empresariais e móveis, enquanto JavaScript é uma linguagem usada para criar interatividade em páginas web.
+    <br>
+    Eles têm sintaxes, propósitos e ambientes de execução diferentes.</p>
+    <br>
+
+    <p><b>2. Quando surgiu o JavaScript?</b></p>
+    <p>O JavaScript surgiu em 1995.
+    <br>
+    Inicialmente, a linguagem foi chamada de LiveScript, mas foi renomeada para JavaScript por motivos de marketing, apesar de não ter relação direta com a linguagem Java.</p>
+    <br>
+
+    <p><b>3. Quem foi o responsável pela criação do JavaScript?</b></p>
+    <p>O responsável pela criação do JavaScript foi Brendan Eich, um programador da Netscape Communications.</p>
+    <br>
+
+    <p><b>4. Qual o caminho trilhado pelo responsável pela criação do JavaScript? Trata-se de alguma empresa ainda no mercado?</b></p>
+    <p>Brendan Eich criou o JavaScript em 1995 na Netscape Communications.
+    <br> Após a Netscape, ele ajudou a fundar a Mozilla Foundation e, em 2014, fundou a Brave Software, que desenvolveu o Brave Browser.
+    <br> A Mozilla e a Brave continuam ativas no mercado.</p>
+    <br>
+</body>
+</html>
